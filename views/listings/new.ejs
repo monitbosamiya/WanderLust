@@ -8,6 +8,7 @@
         method="POST"
         class="needs-validation"
         novalidate
+        enctype="multipart/form-data"
       >
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -20,7 +21,6 @@
             required
           />
           <div class="valid-feedback">Title looks good</div>
-
         </div>
         <div class="mb-3">
           <label for="description" class="form-label">Description</label>
@@ -32,15 +32,14 @@
             class="form-control"
             required
           ></textarea>
-          <div class="invalid-feedback">Please Enter short description </div>
+          <div class="invalid-feedback">Please Enter short description</div>
         </div>
         <div class="mb-3">
-          <label for="image" class="form-label">Image URL</label>
+          <label for="image" class="form-label">Upload Image </label>
           <input
-            type="text"
-            id="image"
+            type="file"
             name="listing[image]"
-            placeholder="Enter image URL/Link"
+            required
             class="form-control"
           />
         </div>
@@ -80,7 +79,7 @@
             class="form-control"
             required
           />
-          <div class="invalid-feedback">Location should be valid </div>
+          <div class="invalid-feedback">Location should be valid</div>
         </div>
         <button class="btn btn-dark add-btn mt-2">Add</button>
       </form>
